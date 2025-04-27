@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGE EDITOR PRO - Convert, Compress, Edit & More!</title>
+    <meta name="description" content="IMAGE EDITOR PRO: Your all-in-one online tool for image conversion, compression, editing, QR code generation, PDF manipulation, and more. Optimize your visuals effortlessly.">
+    <meta name="keywords" content="image converter, image to pdf, compress image, edit image, video editor, qr code generator, pdf to text, pdf to html, pdf compressor, pdf merger, online image editor, free image converter">
+    <meta name="author" content="Rahul Numberdar">
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_UNIT_ID" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="IMAGE EDITOR PRO Logo"> <h1>IMAGE EDITOR PRO</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#image-converter"><i class="fas fa-image"></i> Image Converter</a></li>
+                <li><a href="#image-compressor"><i class="fas fa-file-image"></i> Image Compressor</a></li>
+                <li><a href="#image-editor"><i class="fas fa-edit"></i> Image Editor</a></li>
+                <li><a href="#video-editor"><i class="fas fa-video"></i> Video Editor</a></li>
+                <li><a href="#qr-code"><i class="fas fa-qrcode"></i> QR Code Generator</a></li>
+                <li><a href="#pdf-tools"><i class="fas fa-file-pdf"></i> PDF Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Unlock Your Creative Potential with IMAGE EDITOR PRO</h1>
+                <p>Convert, compress, edit images and videos, generate QR codes, and manage PDFs all in one powerful, user-friendly platform.</p>
+                <a href="#image-converter" class="button">Get Started <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-image">
+                <img src="hero-image.png" alt="Image Editor Pro Features"> </div>
+        </section>
+
+        <div class="ad-space">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_AD_UNIT_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID_1"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <section id="image-converter" class="tool-section">
+            <h2><i class="fas fa-image"></i> Image Converter</h2>
+            <p>Effortlessly convert your images between various formats.</p>
+            <div class="converter-controls">
+                <input type="file" id="image-input-converter" accept="image/*">
+                <label for="image-input-converter" class="button"><i class="fas fa-upload"></i> Select Image</label>
+                <select id="output-format">
+                    <option value="pdf">PDF</option>
+                    <option value="jpeg">JPEG</option>
+                    <option value="png">PNG</option>
+                    <option value="gif">GIF</option>
+                    <option value="webp">WEBP</option>
+                    </select>
+                <button onclick="convertImage()" class="button primary"><i class="fas fa-exchange-alt"></i> Convert</button>
+                <div id="conversion-result"></div>
+            </div>
+        </section>
+
+        <section id="image-compressor" class="tool-section">
+            <h2><i class="fas fa-file-image"></i> Image Compressor</h2>
+            <p>Reduce image file size without significant quality loss.</p>
+            <div class="compressor-controls">
+                <input type="file" id="image-input-compressor" accept="image/*">
+                <label for="image-input-compressor" class="button"><i class="fas fa-upload"></i> Select Image</label>
+                <label for="compression-level">Compression Level:</label>
+                <input type="range" id="compression-level" min="0" max="100" value="75">
+                <span id="compression-value">75%</span>
+                <button onclick="compressImage()" class="button primary"><i class="fas fa-compress"></i> Compress</button>
+                <div id="compression-result"></div>
+            </div>
+        </section>
+
+        <section id="image-editor" class="tool-section">
+            <h2><i class="fas fa-edit"></i> Image Editor (Basic)</h2>
+            <p>Perform basic edits like cropping, rotating, and applying filters.</p>
+            <div class="editor-controls">
+                <input type="file" id="image-input-editor" accept="image/*">
+                <label for="image-input-editor" class="button"><i class="fas fa-upload"></i> Select Image</label>
+                <div id="editor-canvas-container">
+                    <canvas id="editor-canvas"></canvas>
+                </div>
+                <div class="editor-actions">
+                    <button onclick="rotateImage()" class="button"><i class="fas fa-undo-alt"></i> Rotate</button>
+                    </div>
+            </div>
+            <p class="note">Note: Advanced editing features similar to Capcut & VN would require more complex JavaScript libraries or server-side processing.</p>
+        </section>
+
+        <section id="video-editor" class="tool-section">
+            <h2><i class="fas fa-video"></i> Video Editor (Placeholder)</h2>
+            <p>Basic video editing functionalities (placeholder).</p>
+            <div class="video-controls">
+                <input type="file" id="video-input-editor" accept="video/*">
+                <label for="video-input-editor" class="button"><i class="fas fa-upload"></i> Select Video</label>
+                <p class="note">Note: Full-fledged video editing like Capcut & VN requires significant client-side or server-side capabilities.</p>
+            </div>
+        </section>
+
+        <section id="qr-code" class="tool-section">
+            <h2><i class="fas fa-qrcode"></i> QR Code Generator</h2>
+            <p>Generate QR codes from text or URLs.</p>
+            <div class="qr-controls">
+                <input type="text" id="qr-text" placeholder="Enter text or URL">
+                <button onclick="generateQRCode()" class="button primary"><i class="fas fa-cog"></i> Generate QR Code</button>
+                <div id="qrcode-container"></div>
+            </div>
+        </section>
+
+        <section id="pdf-tools" class="tool-section">
+            <h2><i class="fas fa-file-pdf"></i> PDF Tools</h2>
+            <div class="pdf-tool">
+                <h3>PDF to Text Converter (Placeholder)</h3>
+                <input type="file" id="pdf-to-text-input" accept=".pdf">
+                <label for="pdf-to-text-input" class="button"><i class="fas fa-upload"></i> Select PDF</label>
+                <button onclick="pdfToText()" class="button"><i class="fas fa-file-alt"></i> Convert to Text</button>
+                <div id="pdf-to-text-result"></div>
+                <p class="note">Note: PDF to text conversion typically requires server-side processing or advanced JavaScript libraries.</p>
+            </div>
+
+            <div class="pdf-tool">
+                <h3>PDF to HTML Converter (Placeholder)</h3>
+                <input type="file" id="pdf-to-html-input" accept=".pdf">
+                <label for="pdf-to-html-input" class="button"><i class="fas fa-upload"></i> Select PDF</label>
+                <button onclick="pdfToHTML()" class="button"><i class="fas fa-code"></i> Convert to HTML</button>
+                <div id="pdf-to-html-result"></div>
+                <p class="note">Note: PDF to HTML conversion is complex and usually requires server-side processing or specialized libraries.</p>
+            </div>
+
+            <div class="pdf-tool">
+                <h3>PDF Compressor (Placeholder)</h3>
+                <input type="file" id="pdf-compressor-input" accept=".pdf">
+                <label for="pdf-compressor-input" class="button"><i class="fas fa-upload"></i> Select PDF</label>
+                <label for="pdf-compression-level">Compression Level:</label>
+                <input type="range" id="pdf-compression-level" min="0" max="100" value="60">
+                <span id="pdf-compression-value">60%</span>
+                <button onclick="compressPDF()" class="button"><i class="fas fa-compress"></i> Compress PDF</button>
+                <div id="pdf-compression-result"></div>
+                <p class="note">Note: PDF compression often involves server-side processing for effective optimization.</p>
+            </div>
+
+            <div class="pdf-tool">
+                <h3>PDF Merger (Placeholder)</h3>
+                <input type="file" id="pdf-merger-input-1" accept=".pdf" multiple>
+                <label for="pdf-merger-input-1" class="button"><i class="fas fa-upload"></i> Select PDFs</label>
+                <button onclick="mergePDFs()" class="button"><i class="fas fa-file-merge"></i> Merge PDFs</button>
+                <div id="pdf-merger-result"></div>
+                <p class="note">Note: PDF merging can be done client-side with libraries, but larger files might be better handled server-side.</p>
+            </div>
+        </section>
+
+        <div class="ad-space">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_AD_UNIT_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID_2"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 IMAGE EDITOR PRO. All rights reserved. Developed by Rahul Numberdar.</p>
+        <div class="digital-effects">
+            </div>
+    </footer>
+
+    <script src="script.js"></script> </body>
+</html>
